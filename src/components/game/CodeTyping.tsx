@@ -209,7 +209,7 @@ const CodeTypingAnimation = () => {
           {text.split("'").map((part, i) => 
             i % 2 === 0 ? 
               <span key={i} className="text-gray-300">{part}</span> : 
-              <span key={i} className="text-yellow-300">'{part}'</span>
+              <span key={i} className="text-yellow-300">&apos;{part}&apos;</span>
           )}
         </span>
       );
