@@ -48,7 +48,7 @@ export default function Home() {
         <AboutSection />
         <CodeTypingAnimation />
        <div className="animate-fade-in-delayed">
-         <UnderConstructionSection sectionName="Projects Section" />
+         <FeaturedProjects />
        </div>
 
         {/* Skills */}
