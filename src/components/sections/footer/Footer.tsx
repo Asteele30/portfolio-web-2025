@@ -8,13 +8,13 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 flex flex-col items-center gap-3 text-center">
         {/* Social Icons */}
         <div className="flex gap-5 text-2xl text-gray-800">
-          <Link href="https://github.com/" target="_blank" className="hover:text-pink-600 transition-colors">
+          <Link href="https://github.com/Asteele30" target="_blank" className="hover:text-pink-600 transition-colors">
             <FaGithub />
           </Link>
-          <Link href="https://linkedin.com/" target="_blank" className="hover:text-pink-600 transition-colors">
+          <Link href="https://www.linkedin.com/in/aspen-steele" target="_blank" className="hover:text-pink-600 transition-colors">
             <FaLinkedin />
           </Link>
-          <Link href="mailto:you@example.com" className="hover:text-pink-600 transition-colors">
+          <Link href="mailto:aspen@steele-online.com" className="hover:text-pink-600 transition-colors">
             <FaEnvelope />
           </Link>
         </div>

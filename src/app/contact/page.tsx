@@ -223,8 +223,7 @@ export default function ContactPage() {
                 <h3 className="text-2xl font-bold text-gray-900">Quick Response</h3>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
-                I typically respond to messages within 24 hours. For urgent matters, 
-                feel free to reach out via phone or connect with me on social media.
+                I typically respond to messages within 24 hours. 
               </p>
               <div className="bg-green-100 border border-green-200 rounded-lg p-4">
                 <p className="text-green-700 font-medium">
