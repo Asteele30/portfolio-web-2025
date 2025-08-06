@@ -18,7 +18,7 @@ export default function Hero() {
           </div>
 
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
-            Hi, I7apos;m{" "}
+            Hi, I&apos;m{" "}
             <span className="bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
               Aspen Steele.
             </span>
@@ -51,7 +51,7 @@ export default function Hero() {
             {/* Main image container */}
             <div className="relative w-full h-full bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-500 group-hover:scale-105 group-hover:rotate-2">
               <Image
-                src="/aspen-pic.jpg"
+                src="/profile1.jpg"
                 alt="Aspen Steele - Creative Developer"
                 fill
                 style={{ objectFit: "cover" }}
