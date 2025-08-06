@@ -79,7 +79,7 @@ export default function ProjectsPage() {
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="flex items-center justify-between mb-4">
-                  <span className="px-3 py-1 bg-green-100 text-green-700 text-xs rounded-full font-medium border border-green-200">
+                  <span className="px-3 py-1 bg-green-100 text-green-700 text-xs rounded-full font-medium border border-green-200 sm:text-center">
                     {project.status}
                   </span>
                   <span className="text-gray-600 text-sm font-medium">{project.date}</span>
