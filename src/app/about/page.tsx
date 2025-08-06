@@ -5,7 +5,6 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import {
-  Download,
   Code,
   Coffee,
   MapPin,
@@ -130,7 +129,7 @@ export default function AboutPage() {
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">My Story</h2>
               <div className="prose prose-sm md:prose-base text-gray-700 space-y-3 md:space-y-4 max-w-none">
                 <p>
-                  Hi! I'm a passionate full-stack developer with a love for creating clean,
+                  Hi! I&apos;m a passionate full-stack developer with a love for creating clean,
                   efficient, and user-friendly applications.
                 </p>
                 <p>

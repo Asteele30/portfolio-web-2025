@@ -18,7 +18,7 @@ export default function Hero() {
           </div>
 
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
-            Hi, I'm{" "}
+            Hi, I7apos;m{" "}
             <span className="bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
               Aspen Steele.
             </span>

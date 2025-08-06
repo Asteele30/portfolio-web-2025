@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send, User, MessageSquare, Clock, CheckCircle, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, MapPin, Send, User, MessageSquare, Clock, CheckCircle, Github, Linkedin } from "lucide-react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -13,7 +13,7 @@ export default function ContactPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleInputChange = (e: { target: { name: any; value: any; }; }) => {
+  const handleInputChange = (e: { target: { name: string; value: string; }; }) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -76,12 +76,12 @@ export default function ContactPage() {
         <div className="text-center mb-16">
           <div className="inline-block">
             <h1 className="text-6xl font-bold bg-gradient-to-r from-violet-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent mb-6">
-              Let's Connect
+              Let&apos;s Connect
             </h1>
             <div className="h-1 w-32 bg-gradient-to-r from-violet-500 to-cyan-500 mx-auto rounded-full mb-6"></div>
           </div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            I'm always excited to discuss new opportunities, collaborate on projects, 
+            I&apos;m always excited to discuss new opportunities, collaborate on projects, 
             or simply connect with fellow developers and innovators.
           </p>
         </div>
@@ -128,7 +128,7 @@ export default function ContactPage() {
             {isSubmitted && (
               <div className="mb-6 p-4 bg-green-100 border border-green-200 rounded-lg flex items-center">
                 <CheckCircle className="text-green-600 mr-3" size={20} />
-                <p className="text-green-700 font-medium">Message sent successfully! I'll get back to you soon.</p>
+                <p className="text-green-700 font-medium">Message sent successfully! I&apos;ll get back to you soon.</p>
               </div>
             )}
 
@@ -172,7 +172,7 @@ export default function ContactPage() {
                   value={formData.subject}
                   onChange={handleInputChange}
                   className="w-full px-4 py-3 bg-white/50 border border-white/60 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white/70 transition-all"
-                  placeholder="What's this about?"
+                  placeholder="What&apos;s this about?"
                 />
               </div>
 
@@ -273,9 +273,9 @@ export default function ContactPage() {
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">What's your typical project timeline?</h4>
+                  <h4 className="font-semibold text-gray-900 mb-2">What&apos;s your typical project timeline?</h4>
                   <p className="text-gray-700 text-sm">
-                    It depends on the scope, but most projects range from 2-12 weeks. I'll provide detailed estimates upfront.
+                    It depends on the scope, but most projects range from 2-12 weeks. I&apos;ll provide detailed estimates upfront.
                   </p>
                 </div>
               </div>
@@ -290,7 +290,7 @@ export default function ContactPage() {
               Ready to Start Your Project?
             </h2>
             <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
-              Whether you have a detailed plan or just an idea, I'm here to help bring your vision to life.
+              Whether you have a detailed plan or just an idea, I&apos;m here to help bring your vision to life.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

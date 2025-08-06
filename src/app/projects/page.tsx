@@ -286,8 +286,8 @@ export default function ProjectsPage() {
                 Ready to Build Something Amazing?
               </h2>
               <p className="text-gray-700 mb-8 text-lg leading-relaxed">
-                I'm passionate about creating innovative solutions and bringing creative ideas to life. 
-                Whether you have a project in mind or just want to explore possibilities, I'd love to hear from you!
+                I&apos;m passionate about creating innovative solutions and bringing creative ideas to life. 
+                Whether you have a project in mind or just want to explore possibilities, I&apos;d love to hear from you!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
