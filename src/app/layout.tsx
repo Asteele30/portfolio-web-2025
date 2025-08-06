@@ -15,9 +15,31 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Aspen Steele",
-  description: "Portfolio",
+  title: "Aspen Steele Portfolio",
+  description: "Creative full-stack developer & designer",
+  openGraph: {
+    title: "Aspen Steele Portfolio",
+    description: "Check out my latest projects, skills & more!",
+    url: "https://aspen-steele-teal.vercel.app",
+    siteName: "Aspen Steele",
+    images: [
+      {
+        url: "https://aspen-steele-teal.vercel.app/profile1.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Aspen Steele Portfolio Preview",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Aspen Steele Portfolio",
+    description: "Creative front-end developer & designer",
+    images: ["https://aspen-steele-teal.vercel.app/opengraph-image.png"],
+  },
 };
+
 
 export default function RootLayout({
   children,
