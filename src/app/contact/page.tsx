@@ -44,7 +44,7 @@ export default function ContactPage() {
     }
   } catch (error) {
     console.error(error);
-    alert("Uh oh! Couldn’t send the message.");
+    alert("Uh oh! Couldn&apos;t send the message.");
   } finally {
     setIsLoading(false);
   }
