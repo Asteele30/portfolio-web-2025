@@ -161,7 +161,7 @@ export default function AboutPage() {
                     <div className="w-2 h-2 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-full animate-pulse"></div>
                     Experience
                   </h2>
-                  <div className="space-y-6">
+                  <div className="space-y-6 sm:text-left">
                     {experiences.map((exp, i) => (
                       <div key={i} className="pl-6 border-l-2 border-gradient-to-b from-blue-500 to-purple-500 relative hover:border-blue-600 transition-colors group/exp">
                         <div className="absolute -left-2.5 top-2 w-4 h-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full group-hover/exp:scale-125 group-hover/exp:shadow-lg transition-all duration-300" />
@@ -271,7 +271,6 @@ export default function AboutPage() {
                   </div>
                   <Link href="/contact" className="block mt-6">
                     <Button className="w-full text-sm bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white border-none hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 py-3 font-semibold shadow-lg">
-                      <Download size={16} />
                       Contact Me for my Resume
                     </Button>
                   </Link>
