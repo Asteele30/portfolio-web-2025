@@ -21,20 +21,36 @@ export default function ContactPage() {
     });
   };
 
-  const handleSubmit = async (e: { preventDefault: () => void; }) => {
-    e.preventDefault();
-    setIsLoading(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsLoading(false);
+ const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsLoading(true);
+
+  try {
+    const response = await fetch("https://formspree.io/f/mgvzpwyy", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: JSON.stringify(formData)
+    });
+
+    if (response.ok) {
       setIsSubmitted(true);
       setFormData({ name: '', email: '', subject: '', message: '' });
-      
-      // Reset success message after 5 seconds
       setTimeout(() => setIsSubmitted(false), 5000);
-    }, 1500);
-  };
+    } else {
+      alert("Something went wrong! ??");
+    }
+  } catch (error) {
+    console.error(error);
+    alert("Uh oh! Couldn’t send the message.");
+  } finally {
+    setIsLoading(false);
+  }
+};
+
+
 
   const contactMethods = [
     {
