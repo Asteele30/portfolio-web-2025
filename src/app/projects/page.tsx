@@ -160,11 +160,11 @@ export default function ProjectsPage() {
           <div className="bg-gradient-to-r from-white/30 to-white/20 backdrop-blur-md rounded-3xl p-12 border border-white/40 shadow-2xl">
             <div className="max-w-3xl mx-auto">
               <h2 className="text-4xl font-bold text-black mb-6">
-                Let's Build Something Together
+                Let&apos;s Build Something Together
               </h2>
               <p className="text-gray-700 mb-8 text-lg leading-relaxed">
-                While my portfolio projects are in development, I'm actively learning and ready to take on new challenges. 
-                Whether you have an idea for a project or want to collaborate, I'd love to connect! If you would like to see the project or a demo, please fill out the contact form and I will reach out to you.
+                While my portfolio projects are in development, I&apos;m actively learning and ready to take on new challenges. 
+                Whether you have an idea for a project or want to collaborate, I&apos;d love to connect! If you would like to see the project or a demo, please fill out the contact form and I will reach out to you.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
