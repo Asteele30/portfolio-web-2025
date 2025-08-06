@@ -39,7 +39,7 @@ export default function Hero() {
             </Button>
 
             {/* Secondary / ghost button using variant="outline" */}
-            <Button asChild variant="outline">
+            <Button asChild variant="secondary">
               <Link href="/contact">Get in Touch</Link>
             </Button>
           </div>

@@ -5,6 +5,11 @@ import Link from "next/link";
 import Footer from "@/components/sections/footer/Footer";
 import Skills from "@/components/sections/skills/Skills";
 import Image from "next/image";
+import FeaturedProjects from "@/components/sections/projects/FeaturedProjects";
+import UnderConstruction from "@/components/sections/construction/UnderConstruction";
+import UnderConstructionSection from "@/components/sections/construction/UnderConstruction";
+import AboutSection from "@/components/sections/About";
+import CodeTypingAnimation from "@/components/game/CodeTyping";
 
 export default function Home() {
   const projects = [
@@ -31,99 +36,40 @@ export default function Home() {
     }
   ];
 
+  
   return (
-    <main className="min-h-screen flex flex-col bg-gradient-to-br from-pink-300 via-purple-300 to-indigo-400">
-      <div className="flex-grow">
+    <main className="min-h-screen flex flex-col bg-gradient-to-br from-pink-300 via-purple-300 to-indigo-400 relative overflow-hidden">
+
+      <div className="flex-grow relative z-10">
         {/* Hero */}
-        <section className="container mx-auto px-4 max-w-7xl">
+        <section className="container mx-auto px-4 max-w-7xl animate-fade-in">
           <Header />
         </section>
-
-        {/* About intro */}
-        <section className="flex items-center justify-center mx-auto px-4 max-w-7xl py-20">
-          <Card className="max-w-2xl bg-white/20 backdrop-blur-md border border-white/30 shadow-lg">
-            <CardContent className="p-6">
-              <h1 className="text-4xl font-extrabold text-gray-900 mb-6">
-                Get to know me!
-              </h1>
-              <p className="text-lg leading-relaxed text-gray-900 pb-4">
-                I&apos;m a senior Computer Science student at Kennesaw State
-                University with a passion for web development and a curiosity for
-                cybersecurity. I love bringing ideas to life through code and
-                design.
-              </p>
-              <Button asChild variant="default">
-                <Link href="/about">Learn More</Link>
-              </Button>
-            </CardContent>
-          </Card>
-        </section>
-
-        {/* Featured Projects */}
-        <section className="container mx-auto px-4 max-w-7xl py-20">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Featured Projects
-          </h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <Card 
-                key={index} 
-                className="bg-white/20 backdrop-blur-md border border-white/30 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col"
-              >
-                <div className="relative h-48 w-full overflow-hidden rounded-t-lg">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                </div>
-                <CardContent className="p-6 flex-grow">
-                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                  <p className="text-gray-700 mb-4">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech, techIndex) => (
-                      <span 
-                        key={techIndex} 
-                        className="px-2 py-1 bg-white/30 text-xs rounded-full"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </CardContent>
-                <CardFooter className="p-6 pt-0">
-                  <Button asChild variant="outline" className="w-full">
-                    <Link href={project.link}>View Project</Link>
-                  </Button>
-                </CardFooter>
-              </Card>
-            ))}
-          </div>
-
-          <div className="mt-8 text-center">
-            <Button asChild variant="default">
-              <Link href="/projects">View All Projects</Link>
-            </Button>
-          </div>
-        </section>
+        <AboutSection />
+        <CodeTypingAnimation />
+       <div className="animate-fade-in-delayed">
+         <UnderConstructionSection sectionName="Projects Section" />
+       </div>
 
         {/* Skills */}
-        <div className="container mx-auto px-4 max-w-7xl pb-24">
+        <div className="container mx-auto px-4 max-w-7xl pb-24 animate-slide-up-delayed">
           <Skills />
         </div>
       </div>
       
-      {/* Floating chat button */}
+      {/* Floating chat button with enhanced animations */}
       <div className="fixed bottom-6 right-6 z-50">
-        <Button asChild className="rounded-full p-0" size="sm">
+        <Button asChild className="rounded-full p-0 transform transition-all duration-300 
+                                 hover:scale-110 hover:rotate-3 hover:shadow-xl
+                                 animate-float bg-gradient-to-r from-purple-500 to-pink-500
+                                 hover:from-purple-600 hover:to-pink-600" size="sm">
           <Link href="/contact" className="inline-flex items-center px-4 py-3">
-            Let&apos;s Chat!
+            <span className="animate-bounce">💬</span>
+            <span className="ml-2">Let&apos;s Chat!</span>
           </Link>
         </Button>
       </div>
+
     </main>
   );
 }

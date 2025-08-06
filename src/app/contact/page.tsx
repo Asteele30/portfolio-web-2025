@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Mail, MapPin, Send, User, MessageSquare, Clock, CheckCircle, Github, Linkedin } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -58,24 +59,25 @@ export default function ContactPage() {
     {
       icon: Github,
       name: "GitHub",
-      url: "https://github.com/yourusername",
+      url: "https://github.com/ASteele30",
       color: "hover:bg-gray-800"
     },
     {
       icon: Linkedin,
       name: "LinkedIn",
-      url: "https://linkedin.com/in/yourprofile",
+      url: "https://linkedin.com/in/aspen-steele",
       color: "hover:bg-blue-600"
     },
   ];
 
   return (
-    <div className="page-content min-h-screen bg-gradient-to-br from-violet-50 via-blue-50 to-cyan-50 py-20">
-      <div className="container mx-auto px-4 max-w-7xl">
+    // Center the whole page and constrain width:
+    <div className="page-content min-h-screen bg-gradient-to-br from-violet-50 via-blue-50 to-cyan-50 py-20 flex justify-center">
+      <div className="w-full max-w-5xl px-4"> {/* <-- max width and horizontal padding */}
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="inline-block">
-            <h1 className="text-6xl font-bold bg-gradient-to-r from-violet-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent mb-6">
+            <h1 className="text-5xl sm:text-6xl font-bold bg-gradient-to-r from-violet-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent mb-6">
               Let&apos;s Connect
             </h1>
             <div className="h-1 w-32 bg-gradient-to-r from-violet-500 to-cyan-500 mx-auto rounded-full mb-6"></div>
@@ -118,8 +120,8 @@ export default function ContactPage() {
 
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
-          <div className="bg-white/30 backdrop-blur-md rounded-2xl p-8 border border-white/40 shadow-lg">
+
+          <form id="contact-form" data-contact-form className="bg-white/30 backdrop-blur-md rounded-2xl p-8 border border-white/40 shadow-lg" onSubmit={handleSubmit}>
             <div className="flex items-center mb-6">
               <MessageSquare className="text-blue-600 mr-3" size={28} />
               <h2 className="text-3xl font-bold text-gray-900">Send a Message</h2>
@@ -146,6 +148,7 @@ export default function ContactPage() {
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 bg-white/50 border border-white/60 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white/70 transition-all"
                     placeholder="Your full name"
+                    required
                   />
                 </div>
                 <div>
@@ -160,6 +163,7 @@ export default function ContactPage() {
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 bg-white/50 border border-white/60 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white/70 transition-all"
                     placeholder="your.email@example.com"
+                    required
                   />
                 </div>
               </div>
@@ -173,6 +177,7 @@ export default function ContactPage() {
                   onChange={handleInputChange}
                   className="w-full px-4 py-3 bg-white/50 border border-white/60 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white/70 transition-all"
                   placeholder="What&apos;s this about?"
+                  required
                 />
               </div>
 
@@ -185,11 +190,12 @@ export default function ContactPage() {
                   rows={6}
                   className="w-full px-4 py-3 bg-white/50 border border-white/60 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white/70 transition-all resize-none"
                   placeholder="Tell me about your project, ideas, or just say hello!"
+                  required
                 />
               </div>
 
               <button
-                onClick={handleSubmit}
+                type="submit"
                 disabled={isLoading}
                 className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-6 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
               >
@@ -206,7 +212,7 @@ export default function ContactPage() {
                 )}
               </button>
             </div>
-          </div>
+          </form>
 
           {/* Info Panel */}
           <div className="space-y-8">
@@ -222,7 +228,7 @@ export default function ContactPage() {
               </p>
               <div className="bg-green-100 border border-green-200 rounded-lg p-4">
                 <p className="text-green-700 font-medium">
-                  ?? Currently available for new projects and collaborations!
+                  Currently available for new projects and collaborations!
                 </p>
               </div>
             </div>
@@ -241,12 +247,12 @@ export default function ContactPage() {
                       rel="noopener noreferrer"
                       className={`flex items-center p-4 bg-white/50 rounded-xl hover:bg-white/70 transition-all border border-white/60 group ${social.color}`}
                     >
-                      <IconComponent className="text-gray-700 group-hover:text-white mr-4 transition-colors" size={24} />
+                      <IconComponent className="text-gray-700 group-hover:text-[#ff6fc7] mr-4 transition-colors" size={24} />
                       <div>
-                        <h4 className="font-semibold text-gray-900 group-hover:text-white transition-colors">
+                        <h4 className="font-semibold text-gray-900 group-hover:text-[#ff6fc7] transition-colors">
                           {social.name}
                         </h4>
-                        <p className="text-gray-600 text-sm group-hover:text-white/80 transition-colors">
+                        <p className="text-gray-600 text-sm group-hover:text-[#ff6fc7] transition-colors">
                           Follow me on {social.name}
                         </p>
                       </div>
@@ -293,18 +299,11 @@ export default function ContactPage() {
               Whether you have a detailed plan or just an idea, I&apos;m here to help bring your vision to life.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#contact-form"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all font-medium shadow-lg hover:shadow-xl"
-              >
-                Start a Conversation
-              </a>
-              <a
-                href="#projects"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-white/50 text-gray-700 rounded-xl hover:bg-white/70 transition-all font-medium border border-white/60"
-              >
-                View My Work
-              </a>
+              <Button asChild>
+                <a href="/projects">
+                  View my Work
+                </a>
+              </Button>
             </div>
           </div>
         </div>
