@@ -2,7 +2,7 @@ export const projectsData = {
   academic: [
     {
       title: "Feistel Cipher Implementation",
-      description: "Developed Feistel cipher encryption/decryption in C# for 8-bit and 16-bit block sizes. Utilized Galois Field arithmetic with irreducible polynomials for core cryptographic functions.",
+      description: "Developed Feistel cipher encryption/decryption in Java for 8-bit and 16-bit block sizes. Utilized Galois Field arithmetic with irreducible polynomials for core cryptographic functions.",
       technologies: ["Java", "Cryptography", "Galois Field", "File I/O"],
       status: "Completed",
       course: "Cryptography Course",

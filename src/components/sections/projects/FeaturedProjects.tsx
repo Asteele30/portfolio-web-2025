@@ -8,8 +8,8 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 const projects = [
   {
     title: "Feistel Cipher Implementation",
-    description: "Developed Feistel cipher encryption/decryption in C# for 8-bit and 16-bit block sizes using Galois Field arithmetic.",
-    technologies: ["C#", "Cryptography", "Galois Field"],
+    description: "Developed Feistel cipher encryption/decryption in Java for 8-bit and 16-bit block sizes using Galois Field arithmetic.",
+    technologies: ["Java", "Cryptography", "Galois Field"],
     link: "/projects"
   },
   {
