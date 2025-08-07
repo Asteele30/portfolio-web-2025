@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Mail, MapPin, Send, User, MessageSquare, Clock, CheckCircle, Github, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import CTASection from "@/components/sections/CTASection";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -284,7 +285,7 @@ export default function ContactPage() {
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-2">What type of projects do you work on?</h4>
                   <p className="text-gray-700 text-sm">
-                    I specialize in web applications, mobile apps, and full-stack development using modern technologies.
+                    I specialize in web applications using modern technologies, although I am always open to learning and trying new things.
                   </p>
                 </div>
                 <div>
@@ -296,31 +297,22 @@ export default function ContactPage() {
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-2">What&apos;s your typical project timeline?</h4>
                   <p className="text-gray-700 text-sm">
-                    It depends on the scope, but most projects range from 2-12 weeks. I&apos;ll provide detailed estimates upfront.
+                    Timelines vary depending on project scope, usually ranging from a few weeks to a couple of months. I provide clear estimates upfront.
                   </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-        {/* Bottom CTA */}
+      {/* Bottom CTA */}
         <div className="mt-20 text-center">
-          <div className="bg-gradient-to-r from-white/30 to-white/20 backdrop-blur-md rounded-2xl p-12 border border-white/40 shadow-2xl">
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-violet-600 to-cyan-600 bg-clip-text text-transparent mb-4">
-              Ready to Start Your Project?
-            </h2>
-            <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
-              Whether you have a detailed plan or just an idea, I&apos;m here to help bring your vision to life.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild>
-                <a href="/projects">
-                  View my Work
-                </a>
-              </Button>
-            </div>
-          </div>
+          <CTASection
+                    title="Ready to Start Your Project?"
+                    description="Whether you have a detailed plan or just an idea, I'm here to help bring your vision to life."
+                    primaryButton={{ text: "View my Work", href: "/projects" }} secondaryButton={{
+                      text: "About Me",
+                      href: "/about"
+                    }}  />
         </div>
       </div>
     </div>
