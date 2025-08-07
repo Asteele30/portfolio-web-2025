@@ -101,12 +101,12 @@ const CodeTypingAnimation = () => {
       delay: 500 
     },
     { 
-      text: "// Let's build something amazing together! ??", 
+      text: "// Let's build something amazing together! ", 
       type: "comment",
       delay: 60 
     },
     { 
-      text: "// Typing animation component - AI-assisted development with Claude", 
+      text: "// AI-assisted development with Claude", 
       type: "comment",
       delay: 60 
     }
@@ -219,43 +219,47 @@ const CodeTypingAnimation = () => {
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto">
-      <div className="bg-gray-900/95 backdrop-blur-md rounded-2xl border border-gray-700/50 shadow-2xl overflow-hidden">
+    <div className="w-full max-w-4xl mx-auto p-2 sm:p-4">
+      <div className="bg-gray-900/95 backdrop-blur-md rounded-lg sm:rounded-2xl border border-gray-700/50 shadow-2xl overflow-hidden">
         {/* Terminal Header */}
-        <div className="bg-gray-800/90 px-4 py-3 flex items-center gap-2 border-b border-gray-700/50">
-          <div className="flex gap-2">
-            <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-            <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-            <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+        <div className="bg-gray-800/90 px-3 sm:px-4 py-2 sm:py-3 flex items-center gap-2 border-b border-gray-700/50">
+          <div className="flex gap-1.5 sm:gap-2">
+            <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-red-500 rounded-full"></div>
+            <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-yellow-500 rounded-full"></div>
+            <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-green-500 rounded-full"></div>
           </div>
           <div className="flex-1 text-center">
-            <span className="text-gray-400 text-sm font-mono">about-me.js</span>
+            <span className="text-gray-400 text-xs sm:text-sm font-mono">about-me.js</span>
           </div>
-          <div className="text-xs text-gray-500 font-mono">
-            {isLooping ? "? Looping..." : "? Live"}
+          <div className="text-xs text-gray-500 font-mono hidden sm:block">
+            {isLooping ? "?? Looping..." : "?? Live"}
           </div>
         </div>
 
         {/* Code Content */}
-        <div className="p-6 min-h-[400px] font-mono text-sm leading-relaxed">
-          <div className="flex">
+        <div className="p-2 sm:p-6 min-h-[300px] sm:min-h-[400px] font-mono text-xs sm:text-sm leading-relaxed overflow-x-auto">
+          <div className="flex min-w-max">
             {/* Line numbers */}
-            <div className="text-gray-600 text-right pr-4 select-none min-w-[3rem]">
+            <div className="text-gray-600 text-right pr-2 sm:pr-4 select-none min-w-[2rem] sm:min-w-[3rem] flex-shrink-0">
               {displayedText.split('\n').map((_, index) => (
-                <div key={index} className="h-6">
-                  {String(index + 1).padStart(2, '0')}
+                <div key={index} className="h-5 sm:h-6 flex items-center justify-end">
+                  <span className="text-xs sm:text-sm">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
                 </div>
               ))}
             </div>
 
             {/* Code content */}
-            <div className="flex-1">
+            <div className="flex-1 min-w-0">
               {displayedText.split('\n').map((line, index) => (
-                <div key={index} className="h-6 flex items-center">
-                  {line.length > 0 ? renderLine(line, index) : <span>&nbsp;</span>}
-                  {index === displayedText.split('\n').length - 1 && showCursor && (
-                    <span className="text-white bg-white/80 ml-1 animate-pulse">|</span>
-                  )}
+                <div key={index} className="h-5 sm:h-6 flex items-center whitespace-pre-wrap break-words">
+                  <div className="w-full">
+                    {line.length > 0 ? renderLine(line, index) : <span>&nbsp;</span>}
+                    {index === displayedText.split('\n').length - 1 && showCursor && (
+                      <span className="text-white bg-white/80 ml-0.5 animate-pulse inline-block w-2 h-4 sm:h-5">|</span>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>
@@ -263,22 +267,24 @@ const CodeTypingAnimation = () => {
         </div>
 
         {/* Footer with typing status */}
-        <div className="bg-gray-800/90 px-4 py-2 flex justify-between items-center text-xs text-gray-500 border-t border-gray-700/50">
-          <div className="flex items-center gap-4">
+        <div className="bg-gray-800/90 px-3 sm:px-4 py-2 flex justify-between items-center text-xs text-gray-500 border-t border-gray-700/50">
+          <div className="flex items-center gap-2 sm:gap-4">
             <span>JavaScript</span>
-            <span>UTF-8</span>
-            <span>LF</span>
+            <span className="hidden sm:inline">UTF-8</span>
+            <span className="hidden sm:inline">LF</span>
           </div>
           <div className="flex items-center gap-2">
             {isTyping && currentLineIndex < codeLines.length ? (
               <>
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                <span>Typing... Line {currentLineIndex + 1}</span>
+                <span className="hidden sm:inline">Typing... Line {currentLineIndex + 1}</span>
+                <span className="sm:hidden">L{currentLineIndex + 1}</span>
               </>
             ) : (
               <>
                 <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                <span>Animation Complete</span>
+                <span className="hidden sm:inline">Animation Complete</span>
+                <span className="sm:hidden">Done</span>
               </>
             )}
           </div>
