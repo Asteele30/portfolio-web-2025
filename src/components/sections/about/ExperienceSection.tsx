@@ -23,7 +23,7 @@ export default function ExperienceSection({ experiences }: ExperienceSectionProp
           <div className="w-2 h-2 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-full animate-pulse"></div>
           Experience
         </h2>
-        <div className="space-y-6 sm:text-left">
+        <div className="space-y-6 text-left">
           {experiences.map((exp, i) => (
             <div key={i} className="pl-6 border-l-2 border-gradient-to-b from-blue-500 to-purple-500 relative hover:border-blue-600 transition-colors group/exp">
               <div className="absolute -left-2.5 top-2 w-4 h-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full group-hover/exp:scale-125 group-hover/exp:shadow-lg transition-all duration-300" />
