@@ -4,6 +4,9 @@ import * as React from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
+
 
 export function Navbar() {
   const navItems = [
@@ -55,27 +58,24 @@ export function Navbar() {
         </ul>
 
          {/* Mobile Hamburger */}
+        {/* Mobile Hamburger */}
         <button
           className="md:hidden flex flex-col justify-center items-center gap-[6px]"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle navigation menu"
         >
-          <span
-            className={`block h-0.5 w-6 bg-gray-900 rounded transition-transform duration-300 ${
-              mobileMenuOpen ? "rotate-45 translate-y-1.5" : ""
-            }`}
-          />
-          <span
-            className={`block h-0.5 w-6 bg-gray-900 rounded transition-opacity duration-300 ${
-              mobileMenuOpen ? "opacity-0" : "opacity-100"
-            }`}
-          />
-          <span
-            className={`block h-0.5 w-6 bg-gray-900 rounded transition-transform duration-300 ${
-              mobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
-            }`}
-          />
+          {!mobileMenuOpen ? (
+            <>
+              <span className="block h-0.5 w-6 bg-gray-900 rounded" />
+              <span className="block h-0.5 w-6 bg-gray-900 rounded" />
+              <span className="block h-0.5 w-6 bg-gray-900 rounded" />
+            </>
+          ) : (
+            <FontAwesomeIcon icon={faXmark} className="text-2xl text-gray-600" />
+
+          )}
         </button>
+
       </div>
 
       {/*Mobile Menu*/}
