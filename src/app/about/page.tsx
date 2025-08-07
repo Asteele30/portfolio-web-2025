@@ -61,11 +61,11 @@ export default function AboutPage() {
   ];
 
   const stats = [
-    { label: "Years of Experience", value: "3+" },
-    { label: "Projects Completed", value: "15+" },
-    { label: "Technologies Learned", value: "10+" },
-    { label: "Coffee Cups", value: "∞" },
-  ];
+  { label: "Years of Experience", value: "2+" },
+  { label: "Projects Completed", value: "6+" },
+  { label: "Technologies Learned", value: "5+" },
+  { label: "Coffee Cups", value: "∞" },
+];
 
   const interests = [
     { name: "Web Development", icon: Code },
