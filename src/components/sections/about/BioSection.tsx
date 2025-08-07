@@ -11,13 +11,13 @@ export default function BioSection() {
         </h2>
         <div className="text-gray-700 text-sm md:text-base space-y-3 text-left">
           <p className="hover:text-gray-800 transition-colors">
-            Hi! I&apos;m a passionate full-stack developer who loves building clean, efficient, user-focused applications.
+            Hi! I&apos;m a passionate front-end developer who loves building clean, efficient, user-focused applications.
           </p>
           <p className="hover:text-gray-800 transition-colors">
             I work with modern web stacks - React, Next.js, and Node.js, and have experience with Java and C#.
           </p>
           <p className="hover:text-gray-800 transition-colors">
-            I enjoy learning new tools, contributing to open source, and helping others grow.
+            I enjoy learning new tools, growing my knowledge, and cats!
           </p>
         </div>
       </div>
