@@ -232,7 +232,7 @@ const CodeTypingAnimation = () => {
             <span className="text-gray-400 text-xs sm:text-sm font-mono">about-me.js</span>
           </div>
           <div className="text-xs text-gray-500 font-mono hidden sm:block">
-            {isLooping ? "?? Looping..." : "?? Live"}
+            {isLooping ? "Looping..." : "Live"}
           </div>
         </div>
 
