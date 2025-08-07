@@ -1,13 +1,18 @@
 import Image from "next/image";
 
 export default function Skills() {
-  const skills = [
-    { name: "React*", src: "/react-svgrepo-com.svg", alt: "React Logo" },
-    { name: "Node.js*", src: "/node-js-svgrepo-com.svg", alt: "Node.js Logo" },
-    { name: "Tailwind CSS*", src: "/tailwind-svgrepo-com.svg", alt: "Tailwind CSS Logo" },
-    { name: "TypeScript*", src: "/typescript-16-svgrepo-com.svg", alt: "TypeScript Logo" },
-    { name: "Next.js*", src: "/next-js-svgrepo-com.svg", alt: "Next.js Logo" },
-  ];
+const skills = [
+  { name: "React*", src: "/react-svgrepo-com.svg", alt: "React Logo" },
+  { name: "Node.js*", src: "/node-js-svgrepo-com.svg", alt: "Node.js Logo" },
+  { name: "Tailwind CSS*", src: "/tailwind-svgrepo-com.svg", alt: "Tailwind CSS Logo" },
+  { name: "TypeScript*", src: "/typescript-16-svgrepo-com.svg", alt: "TypeScript Logo" },
+  { name: "Next.js*", src: "/next-js-svgrepo-com.svg", alt: "Next.js Logo" },
+
+  { name: "Java", src: "/java-svgrepo-com.svg", alt: "Java Logo" },
+  { name: "C#", src: "/csharp-svgrepo-com.svg", alt: "C# Logo" },
+  { name: "Python", src: "/python-svgrepo-com.svg", alt: "Python Logo" },
+  { name: "Git", src: "/git-merge-svgrepo-com.svg", alt: "Git Logo" },
+];
 
   return (
     <section className="container mx-auto px-4 max-w-7xl py-20 bg-white/10 rounded-lg backdrop-blur-md shadow-lg">

@@ -5,29 +5,7 @@ import AboutSection from "@/components/sections/about/About";
 import CodeTypingAnimation from "@/components/game/CodeTyping";
 
 export default function Home() {
-  const projects = [
-    {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with React, Next.js, and Stripe integration.",
-      technologies: ["React", "Next.js", "Node.js", "MongoDB", "Stripe"],
-      image: "/images/ecommerce-project.jpg",
-      link: "/projects/ecommerce"
-    },
-    {
-      title: "Task Management App",
-      description: "Productivity application with real-time collaboration features and drag-and-drop interface.",
-      technologies: ["TypeScript", "React", "Firebase", "Tailwind CSS"],
-      image: "/images/task-app.jpg",
-      link: "/projects/task-manager"
-    },
-    {
-      title: "Portfolio Website",
-      description: "Personal portfolio website showcasing projects and skills with responsive design.",
-      technologies: ["Next.js", "Tailwind CSS", "Framer Motion"],
-      image: "/images/portfolio-project.jpg",
-      link: "/projects/portfolio"
-    }
-  ];
+
 
   
   return (
